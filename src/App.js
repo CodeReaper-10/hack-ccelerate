@@ -4,7 +4,8 @@ import Home from "./pages/Home";
 import "./index.css";
 import ServiceItems from "./components/ServiceItems";
 import ServiceCard from "./components/ServiceCard";
-import SignUp from "./pages/SignUp";
+import SignUpUser from "./pages/SignUpUser";
+import SignUpBusiness from "./pages/SignUpBusiness";
 
 const App = () => {
     return (
@@ -15,7 +16,11 @@ const App = () => {
                     {/* Home is the landing page */}
                     <Route path="/test" element={<ServiceCard />} />
                     <Route path="/service/:id" element={<ServiceCard />} />
-                    <Route path="/signup" element={<SignUp />} />
+                    <Route path="/registerUser" element={<SignUpUser />} />
+                    <Route
+                        path="/registerBusiness"
+                        element={<SignUpBusiness />}
+                    />
                 </Routes>
             </BrowserRouter>
         </div>

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineCar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
-    const [nav, setNav] = useState(false);
+const Navbar = (props) => {
+    const [nav, setNav] = useState(true);
     const handleNav = () => {
         setNav(!nav);
     };
@@ -35,7 +35,9 @@ const Navbar = () => {
             <div
                 className={
                     !nav
-                        ? "fixed left-0 top-0 w-[63%] md:hidden lg:hidden h-full border-r border-r-gray-800 bg-[#000031] ease-in-out duration-500"
+                        ? props.black == "true"
+                            ? "fixed left-0 top-0 w-[63%] md:hidden lg:hidden h-full border-r border-r-gray-800  ease-in-out duration-500 bg-black "
+                            : "fixed left-0 top-0 w-[63%] md:hidden lg:hidden h-full border-r border-r-gray-800  ease-in-out duration-500 bg-[#000031] "
                         : "fixed left-[-100%]"
                 }
             >
