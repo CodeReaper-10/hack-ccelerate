@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ServiceItems() {
   const services = [
@@ -8,17 +9,25 @@ export default function ServiceItems() {
     "Accident",
     "Mechanic ",
   ];
+  const navigate = useNavigate();
+
   return (
     <div className="border-2 border-white p-5 px-10 ">
       {services.map((service) => {
-        return <ServiceBlock service={service} />;
+        return <ServiceBlock service={service} navigate={navigate} />;
       })}
     </div>
   );
 }
+
 const ServiceBlock = (props) => {
   return (
-    <div className="border-2 border-white p-2  my-5 rounded-lg cursor-pointer " onClick={() => {}}>
+    <div
+      className="border-2 border-white p-2  my-5 rounded-lg cursor-pointer "
+      onClick={() => {
+        props.navigate("/service/" + props.service);
+      }}
+    >
       <p className="text-lg font-bold text-center">{props.service}</p>
     </div>
   );
