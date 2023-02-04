@@ -14,7 +14,7 @@ const Navbar = () => {
                 <AiOutlineCar className="inline" />
                 (Project Name)
             </h1>
-            <ul className="hidden md:flex">
+            <ul className="hidden md:flex mt-5">
                 <li className="p-4">
                     <Link to="/registerUser">Services</Link>
                 </li>
