@@ -10,8 +10,8 @@ const SignUpBusiness = () => {
             <FormSU type="Business" />
             <h1 className="-mt-20 flex justify-center items-center">
                 Already have an account?
-                <Link className="underline" to="/loginBusiness">
-                    Login
+                <Link className="underline ml-1" to="/loginBusiness">
+                    Login!
                 </Link>
             </h1>
         </div>
