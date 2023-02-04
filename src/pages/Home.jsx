@@ -7,7 +7,7 @@ import "../index.css";
 const Home = () => {
     return (
         <div id="home">
-            <Navbar />
+            <Navbar black="true" />
             <Hero />
             {/* <Container/> */}
         </div>
