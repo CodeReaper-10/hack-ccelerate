@@ -12,7 +12,7 @@ const Navbar = (props) => {
         <nav className="flex justify-between items-center h-20 max-w-[1240px] mx-auto px-4 text-white">
             <h1 className="w-full text-3xl font-bold text-[#00df8c] ml-auto ">
                 <AiOutlineCar className="inline" />
-                (Project Name)
+                <Link to="/">(Project Name)</Link>
             </h1>
             <ul className="hidden md:flex mt-5">
                 <li className="p-4">
@@ -35,7 +35,7 @@ const Navbar = (props) => {
             <div
                 className={
                     !nav
-                        ? props.black == "true"
+                        ? props.black === "true"
                             ? "fixed left-0 top-0 w-[63%] md:hidden lg:hidden h-full border-r border-r-gray-800  ease-in-out duration-500 bg-black "
                             : "fixed left-0 top-0 w-[63%] md:hidden lg:hidden h-full border-r border-r-gray-800  ease-in-out duration-500 bg-[#000031] "
                         : "fixed left-[-100%]"
