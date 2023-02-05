@@ -8,7 +8,6 @@ export default function Container() {
   return (
     <div className="grid grid-cols-3 p-5">
       <ServiceItems />
-      
       <Canvas>
         <CarModel />
       </Canvas>
