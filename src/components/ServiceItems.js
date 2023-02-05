@@ -1,5 +1,7 @@
-import React from "react";
+import { doc, getDoc } from "firebase/firestore";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { db } from "../firebase";
 
 export default function ServiceItems() {
   const services = [
@@ -21,6 +23,8 @@ export default function ServiceItems() {
 }
 
 const ServiceBlock = (props) => {
+ 
+  
   return (
     <div
       className="border-2 border-white p-2  my-5 rounded-lg cursor-pointer "
