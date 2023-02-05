@@ -1,3 +1,4 @@
+import { Canvas } from "@react-three/fiber";
 import React, { useState } from "react";
 import CarModel from "./CarModel";
 import Map from "./Map";
@@ -7,8 +8,12 @@ export default function Container() {
   return (
     <div className="grid grid-cols-3 p-5">
       <ServiceItems />
+      
+      <Canvas>
+        <CarModel />
+      </Canvas>
       <Map />
-      <CarModel />
+      
     </div>
   );
 }
