@@ -8,8 +8,7 @@ import SignUpUser from "./pages/SignUpUser";
 import SignUpBusiness from "./pages/SignUpBusiness";
 import LoginUser from "./pages/LoginUser";
 import LoginBusiness from "./pages/LoginBusiness";
-import Container from "./components/Container";
-import Services from "./pages/Services";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
     return (
@@ -26,7 +25,7 @@ const App = () => {
                     />
                     <Route path="/loginUser" element={<LoginUser />} />
                     <Route path="/loginBusiness" element={<LoginBusiness />} />
-                    <Route path="/test" element={<Container />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
                 </Routes>
             </BrowserRouter>
         </div>
