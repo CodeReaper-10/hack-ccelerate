@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/hack-ccelerate/static/css/main.777ad261.css",
+    "main.js": "/hack-ccelerate/static/js/main.92f90578.js",
+    "static/media/map.png": "/hack-ccelerate/static/media/map.ccbeadf7b30644201c17.png",
+    "static/media/speedometer.jpg": "/hack-ccelerate/static/media/speedometer.1814324c70aa999014ac.jpg",
+    "static/media/Adipta.jpg": "/hack-ccelerate/static/media/Adipta.69ede7dd2feaf72b56ae.jpg",
+    "static/media/favicon.ico": "/hack-ccelerate/static/media/favicon.c189922219ca18245b05.ico",
+    "static/media/Kennis.jpg": "/hack-ccelerate/static/media/Kennis.9a37c5bd3593ec09ceab.jpg",
+    "static/media/Swapnil.jpg": "/hack-ccelerate/static/media/Swapnil.821f2e373528c5ac08f2.jpg",
+    "static/media/Pratham.jpg": "/hack-ccelerate/static/media/Pratham.44a08f12d5705af589d0.jpg",
+    "index.html": "/hack-ccelerate/index.html",
+    "main.777ad261.css.map": "/hack-ccelerate/static/css/main.777ad261.css.map",
+    "main.92f90578.js.map": "/hack-ccelerate/static/js/main.92f90578.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.777ad261.css",
+    "static/js/main.92f90578.js"
+  ]
+}
