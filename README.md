@@ -53,3 +53,8 @@ Our car dashboard themed webapp is designed to help any motorist with nearby roa
 ## Collaboration chart
 
 ![Collaboration chart](./src/assets/images/collaboration.png)
+
+## Firbase auth working
+
+![Firebase Auth](./src/assets/images/image.png)
+
