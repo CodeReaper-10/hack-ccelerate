@@ -12,7 +12,7 @@ const Navbar = (props) => {
         <nav className="flex justify-between items-center h-20 max-w-[1240px] mx-auto px-4 text-white">
             <h1 className="w-full text-3xl font-bold text-[#00df8c] ml-auto ">
                 <AiOutlineCar className="inline" />
-                <Link to="/">(Project Name)</Link>
+                <Link to="/">MotorMate</Link>
             </h1>
             <ul className="hidden md:flex mt-5">
                 <li className="p-4">
@@ -43,7 +43,7 @@ const Navbar = (props) => {
             >
                 <h1 className="w-full text-3xl font-bold text-[#00df8c] m-8 p-6">
                     <AiOutlineCar className="inline" />
-                    (Project Name)
+                    MotorMate
                 </h1>
                 <ul className="pt-12 uppercase p-4">
                     <li className="p-4 border-b border-gray-600">
