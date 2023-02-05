@@ -10,6 +10,7 @@ import LoginUser from "./pages/LoginUser";
 import LoginBusiness from "./pages/LoginBusiness";
 import Dashboard from "./pages/Dashboard";
 import Services from "./pages/Services";
+import About from "./pages/About";
 
 const App = () => {
     return (
@@ -26,6 +27,7 @@ const App = () => {
                     <Route path="/loginUser" element={<LoginUser />} />
                     <Route path="/loginBusiness" element={<LoginBusiness />} />
                     <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/about" element={<About />} />
                 </Routes>
             </BrowserRouter>
         </div>

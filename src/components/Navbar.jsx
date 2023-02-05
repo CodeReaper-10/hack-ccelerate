@@ -23,7 +23,7 @@ const Navbar = (props) => {
             </h1>
             <ul className="hidden md:flex mt-5">
                 <li className="p-4">
-                    <Link to="/registerUser">Services</Link>
+                    <Link to="/registerUser">User</Link>
                 </li>
                 <li className="p-4">
                     <Link to="/registerBusiness">Business</Link>
@@ -58,7 +58,7 @@ const Navbar = (props) => {
                 </h1>
                 <ul className="pt-12 uppercase p-4">
                     <li className="p-4 border-b border-gray-600">
-                        <Link to="/registerUser">Services</Link>
+                        <Link to="/registerUser">User</Link>
                     </li>
                     <li className="p-4 border-b border-gray-600">
                         <Link to="/registerBusiness">Business</Link>

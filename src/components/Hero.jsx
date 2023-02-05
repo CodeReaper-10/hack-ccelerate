@@ -12,7 +12,7 @@ const Hero = () => {
             <div className="ml-14">
                 <Link to="/registerUser">
                     <button className="bg-[#00df8c] text-black px-4 py-2 rounded-lg mt-4">
-                        Service
+                        User
                     </button>
                 </Link>
                 <Link to="/registerBusiness">
