@@ -1,30 +1,33 @@
 import { doc, setDoc } from "firebase/firestore";
 import React, { useState } from "react";
 import { db } from "../firebase";
+import { useNavigate } from "react-router-dom";
 const FormSU = (props) => {
-
+    const navigate = useNavigate();
     const [state, setState] = useState({
         email: "",
         password: "",
-        fname:"",
-        lname:""
-      });
-    
-      const handleInputChange = (event) => {
+        fname: "",
+        lname: "",
+    });
+
+    const handleInputChange = (event) => {
         const { name, value } = event.target;
         setState((prevProps) => ({
-          ...prevProps,
-          [name]: value
+            ...prevProps,
+            [name]: value,
         }));
-      };
-    const handleSubmit = (e)=>{
-        e.preventDefault(); 
-       
-        const docRef = doc(db,"users",state.fname+" "+state.lname );
-        const setData= async ()=>{
-           await setDoc(docRef,state);}
-           setData();
-    }
+    };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const docRef = doc(db, "users", state.fname + " " + state.lname);
+        const setData = async () => {
+            await setDoc(docRef, state);
+        };
+        setData();
+        navigate("/dashboard");
+    };
     return (
         <div>
             <div className="-mt-10 flex justify-center items-center h-screen">
@@ -90,7 +93,7 @@ const FormSU = (props) => {
                             className="mb-2 h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm"
                             value={state.password}
                             onChange={handleInputChange}
-                       ></input>
+                        ></input>
 
                         {/* confirm pass */}
                         <label for="confirmPassword" className="text-sm">

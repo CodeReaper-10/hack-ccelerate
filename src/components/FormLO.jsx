@@ -1,25 +1,26 @@
 import { doc, setDoc } from "firebase/firestore";
 import React, { useState } from "react";
 import { db } from "../firebase";
+import { useNavigate } from "react-router-dom";
 
 const FormLO = (props) => {
+    const navigate = useNavigate();
     const [state, setState] = useState({
         email: "",
-        password: ""
-      });
-    
-      const handleInputChange = (event) => {
+        password: "",
+    });
+
+    const handleInputChange = (event) => {
         const { name, value } = event.target;
         setState((prevProps) => ({
-          ...prevProps,
-          [name]: value
+            ...prevProps,
+            [name]: value,
         }));
-      };
-    const handleSubmit = (e)=>{
-        e.preventDefault(); 
-      
-       
-    }
+    };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        navigate("/dashboard");
+    };
     return (
         <div className="-mt-10 flex justify-center items-center h-screen">
             <div
