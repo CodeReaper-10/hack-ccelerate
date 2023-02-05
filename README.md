@@ -1,4 +1,4 @@
-## Hack-ccelerate
+## MotorMate
 
 Have you ever come across a situation where you've had a car breakdown in the middle of nowhere?
 Have you ever had to wait for hours for a mechanic to arrive?
