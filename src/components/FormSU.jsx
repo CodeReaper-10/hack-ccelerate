@@ -1,6 +1,30 @@
-import React from "react";
-
+import { doc, setDoc } from "firebase/firestore";
+import React, { useState } from "react";
+import { db } from "../firebase";
 const FormSU = (props) => {
+
+    const [state, setState] = useState({
+        email: "",
+        password: "",
+        fname:"",
+        lname:""
+      });
+    
+      const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setState((prevProps) => ({
+          ...prevProps,
+          [name]: value
+        }));
+      };
+    const handleSubmit = (e)=>{
+        e.preventDefault(); 
+       
+        const docRef = doc(db,"users",state.fname+" "+state.lname );
+        const setData= async ()=>{
+           await setDoc(docRef,state);}
+           setData();
+    }
     return (
         <div>
             <div className="-mt-10 flex justify-center items-center h-screen">
@@ -8,7 +32,7 @@ const FormSU = (props) => {
                     id="form"
                     className="block  p-6 rounded-xl shodow-md shadow-slate-300 w-90"
                 >
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <h2 className="text-[#00df8c] text-3xl font-semibold my-4">
                             {`Register as a ${props.type}`}
                         </h2>
@@ -21,8 +45,10 @@ const FormSU = (props) => {
                                 </label>
                                 <input
                                     type="text"
-                                    name=""
+                                    name="fname"
                                     id="fname"
+                                    value={state.fname}
+                                    onChange={handleInputChange}
                                     className="h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm"
                                 ></input>
                             </div>
@@ -32,9 +58,11 @@ const FormSU = (props) => {
                                 </label>
                                 <input
                                     type="text"
-                                    name=""
+                                    name="lname"
                                     id="lname"
                                     className=" mb-2 h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm"
+                                    value={state.lname}
+                                    onChange={handleInputChange}
                                 ></input>
                             </div>
                         </div>
@@ -44,9 +72,11 @@ const FormSU = (props) => {
                         </label>
                         <input
                             type="email"
-                            name=""
+                            name="email"
                             id="email"
                             className="mb-2 h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm"
+                            value={state.email}
+                            onChange={handleInputChange}
                         ></input>
 
                         {/* password */}
@@ -55,10 +85,12 @@ const FormSU = (props) => {
                         </label>
                         <input
                             type="password"
-                            name=""
+                            name="password"
                             id="password"
                             className="mb-2 h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm"
-                        ></input>
+                            value={state.password}
+                            onChange={handleInputChange}
+                       ></input>
 
                         {/* confirm pass */}
                         <label for="confirmPassword" className="text-sm">
@@ -66,7 +98,7 @@ const FormSU = (props) => {
                         </label>
                         <input
                             type="password"
-                            name=""
+                            name="confirmPassword"
                             id="confirmPassword"
                             className="mb-2 h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm"
                         ></input>

@@ -1,13 +1,32 @@
-import React from "react";
+import { doc, setDoc } from "firebase/firestore";
+import React, { useState } from "react";
+import { db } from "../firebase";
 
 const FormLO = (props) => {
+    const [state, setState] = useState({
+        email: "",
+        password: ""
+      });
+    
+      const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setState((prevProps) => ({
+          ...prevProps,
+          [name]: value
+        }));
+      };
+    const handleSubmit = (e)=>{
+        e.preventDefault(); 
+      
+       
+    }
     return (
         <div className="-mt-10 flex justify-center items-center h-screen">
             <div
                 id="form"
                 className="block  p-6 rounded-xl shodow-md shadow-slate-300 w-90"
             >
-                <form>
+                <form onSubmit={handleSubmit}>
                     <h2 className="text-[#00df8c] text-3xl font-semibold my-4">
                         {`Login as a ${props.type}`}
                     </h2>
@@ -18,8 +37,10 @@ const FormLO = (props) => {
                     </label>
                     <input
                         type="email"
-                        name=""
+                        name="email"
                         id="email"
+                        value={state.email}
+                        onChange={handleInputChange}
                         className="mb-2 h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm"
                     ></input>
 
@@ -29,7 +50,9 @@ const FormLO = (props) => {
                     </label>
                     <input
                         type="password"
-                        name=""
+                        name="password"
+                        value={state.password}
+                        onChange={handleInputChange}
                         id="password"
                         className="mb-2 h-8 w-full rounded-md border border-slate-300 text-sm pl-2 bg-transparent outline-blue-600 shadow-sm"
                     ></input>

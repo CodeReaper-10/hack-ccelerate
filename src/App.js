@@ -9,27 +9,24 @@ import SignUpBusiness from "./pages/SignUpBusiness";
 import LoginUser from "./pages/LoginUser";
 import LoginBusiness from "./pages/LoginBusiness";
 import Dashboard from "./pages/Dashboard";
+import Services from "./pages/Services";
 
 const App = () => {
-    return (
-        <div className="body">
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Home />} />{" "}
-                    {/* Home is the landing page */}
-                    <Route path="/service/:id" element={<Services />} />
-                    <Route path="/registerUser" element={<SignUpUser />} />
-                    <Route
-                        path="/registerBusiness"
-                        element={<SignUpBusiness />}
-                    />
-                    <Route path="/loginUser" element={<LoginUser />} />
-                    <Route path="/loginBusiness" element={<LoginBusiness />} />
-                    <Route path="/dashboard" element={<Dashboard />} />
-                </Routes>
-            </BrowserRouter>
-        </div>
-    );
+  return (
+    <div className="body">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} /> 
+          <Route path="/service/:id" element={<Services />} />
+          <Route path="/registerUser" element={<SignUpUser />} />
+          <Route path="/registerBusiness" element={<SignUpBusiness />} />
+          <Route path="/loginUser" element={<LoginUser />} />
+          <Route path="/loginBusiness" element={<LoginBusiness />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 };
 
 export default App;
